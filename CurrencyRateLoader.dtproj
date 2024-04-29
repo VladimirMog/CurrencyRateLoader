@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DELL-T7810</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMV1YGT2bP0yh2XXt+aKVSAAAAAACAAAAAAAQZgAAAAEAACAAAACcFeq4dsASeGm7B6eUK65PclxGy7TTBWYPIrw68ZxWxQAAAAAOgAAAAAIAACAAAAA2brkqzMryp2LiaI1axwy84HTHsYDfNJpQWpFYhgcPppAAAACipN9CKLba4+ed++M+PHZzXmiXrJdSVNxdNIVf0dvfTw2/kmrXGuNEQQ9Y3cqnPNvgRw+S6voEGZuO9bDF/qDrrAHSIMkST8gOedcj91psgY/5MBh+X9SrS/ja/0tcxPE7UdL2SB8UbSpL4Fqgfr5kTN7UdozpUmlrhH9OXkGXp34H8bLfse/mguV7AhcmgZ1AAAAA4FDQH8ogFeseTPv1g0JFER+Q+50f8K0b+3LSrFFbxASnFZaSTPHUsl6+WNFNDz53NqFhfQ7Viac5ZG/2xY4EBA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMV1YGT2bP0yh2XXt+aKVSAAAAAACAAAAAAAQZgAAAAEAACAAAAAK5fAPC/K7b+7ZCF1GuotlwWZmQUndk5G6cg5D6gp2ggAAAAAOgAAAAAIAACAAAACtjuFizLawspRMO6mu7HrO0wgwUunxmB4oixhI4Lf+gJAAAABN5gB89M7y1NMSOLniIFrdCvRbrTMgyaH/b+y7aGLsEfbdnNSKQJ0dctRyCLQJlELYx56dEbM81uw6OpBD5DDnS9DFHOmufHWXulfXPR55hZ/QTw1AMTZN8/mDf33rfqAPXtRylzwm+sspjTcbS8lwfcgbfaKlEB7tJ8KzOcTILv7fmqcANQdticpRJM7P1DRAAAAAyMVOeb3XvIaV1pQ8jx6gWSPGmZQbUEunzHVbaFPRqB1DIpfLwkJcUA8muGKO9kn6BY7wZs9QdbD7p1gD/p9SsA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">Loader</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">20</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">22</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{DA9F2243-7CD7-4BD2-9BA9-7CD5F34AA35E}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{CD04FF0F-B9BD-4E31-8F14-9C418C69244B}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -405,7 +405,20 @@
     </Manifest>
   </DeploymentModelSpecificContent>
   <ControlFlowParts />
-  <Miscellaneous />
+  <Miscellaneous>
+    <ProjectItem>
+      <Name>eurofxref-hist.sql</Name>
+      <FullPath>eurofxref-hist.sql</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ProcessRates.sql</Name>
+      <FullPath>ProcessRates.sql</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Rates.sql</Name>
+      <FullPath>Rates.sql</FullPath>
+    </ProjectItem>
+  </Miscellaneous>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
