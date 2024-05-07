@@ -1,5 +1,13 @@
-CREATE PROCEDURE [dbo].[ProcessRates]
+USE [Lotto]
+GO
+/****** Object:  StoredProcedure [dbo].[ProcessRates]    Script Date: 5/7/2024 6:49:31 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[ProcessRates]
 AS
+
 WITH cte 
 AS
 (  SELECT
@@ -45,14 +53,15 @@ AS
   ,CONVERT(MONEY, NULLIF(SGD, 'N/A')) SGD
   ,CONVERT(MONEY, NULLIF(THB, 'N/A')) THB
   ,CONVERT(MONEY, NULLIF(ZAR, 'N/A')) ZAR
+  ,NULL AS [ScaledPred]
   FROM [dbo].[eurofxref-hist] 
 )
 
 MERGE [dbo].[Rates] TRG
 USING (
-SELECT [Date],[Currency],[Rate]
+SELECT [Date],[Currency],[Rate],[ScaledPred]
   FROM 
-  (SELECT [Date]
+  (SELECT [Date],[ScaledPred]
 ,[USD]
 ,[JPY],[BGN],[CYP],[CZK],[DKK],[EEK],[GBP],[HUF],[LTL],[LVL],[MTL],[PLN],[ROL],[RON],[SEK],[SIT],[SKK],[CHF],[ISK],[NOK]
 ,[HRK],[RUB],[TRL],[TRY],[AUD],[BRL],[CAD],[CNY],[HKD],[IDR],[ILS],[INR],[KRW],[MXN],[MYR],[NZD],[PHP],[SGD],[THB],[ZAR]
@@ -65,4 +74,4 @@ SELECT [Date],[Currency],[Rate]
 ) upv ) SRC
 ON SRC.[Date] = TRG.[Date] AND SRC.[Currency] = TRG.[Currency] 
 WHEN NOT MATCHED THEN INSERT
-VALUES ([Date],[Currency],[Rate]);
+VALUES ([Date],[Currency],[Rate],[ScaledPred]);
