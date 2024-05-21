@@ -1,0 +1,22 @@
+DECLARE @date DATE = '1999-01-04'
+DECLARE @rate MONEY
+DECLARE @curr NVARCHAR(3) = 'USD'
+
+DECLARE CUR CURSOR
+FOR
+SELECT DISTINCT [Date], [Rate]
+  FROM [Lotto].[dbo].[Rates]
+  WHERE [Currency] = @curr
+ORDER BY 1
+
+OPEN CUR
+WHILE (1=1)
+BEGIN
+	FETCH FROM CUR INTO @date
+	IF @@FETCH_STATUS <> 0
+		BREAK
+	--EXEC [dbo].[FillWeights]  @date =  @date
+	IF NOT EXISTS (SELECT 1 FROM [Weights] WHERE  )
+END
+CLOSE CUR
+DEALLOCATE CUR

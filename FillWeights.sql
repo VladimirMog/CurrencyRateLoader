@@ -1,10 +1,11 @@
 CREATE OR ALTER PROC [dbo].[FillWeights]
+	@date DATE = NULL
 AS
 BEGIN
 DECLARE @begin_date DATE
 DECLARE @end_date DATE
 
-DECLARE @date DATE = GETDATE();
+SET @date = ISNULL(@date, GETDATE()-1);
 
 IF OBJECT_ID('tempdb..#dates') IS NOT NULL
 	DROP TABLE #dates
@@ -12,6 +13,7 @@ IF OBJECT_ID('tempdb..#dates') IS NOT NULL
 SELECT DISTINCT TOP 10 [Date]
 INTO #dates
 FROM [dbo].[Rates]
+WHERE [Date] <= @date
 ORDER BY [Date] DESC
 
 SELECT 
@@ -31,10 +33,11 @@ FROM [Lotto].[dbo].[Rates] r
 	[dbo].[Currencies] c ON r.Currency = c.Currency
 WHERE [Date] BETWEEN @begin_date AND @end_date
 
-IF NOT EXISTS(SELECT 1 FROM [dbo].[Rates] WHERE [Date] = @date)
+IF NOT EXISTS(SELECT 1 FROM [dbo].[Weights] WHERE [Date] = @date)
 BEGIN
-	INSERT INTO [dbo].[Rates] ([Date],[Currency]) 
-	SELECT DISTINCT @date, [Currency] FROM #weights
+	INSERT INTO [dbo].[Weights] ([Date]) 
+	VALUES (@date)
+	--SELECT DISTINCT @date, [Currency] FROM #weights
 END
 
 UPDATE [dbo].[Weights]

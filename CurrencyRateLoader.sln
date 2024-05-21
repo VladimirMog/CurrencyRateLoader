@@ -5,13 +5,24 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "CurrencyRateLoader", "CurrencyRateLoader.dtproj", "{1ABA3FD1-CACC-4FBB-9339-C0418A08614F}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Keras-CurrencyRates", "..\Keras-CurrencyRates\Keras-CurrencyRates.pyproj", "{96262820-B753-4CDE-81B7-B55FFF6825CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Development|Default = Development|Default
+		Debug|Any CPU = Debug|Any CPU
+		Development|Any CPU = Development|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1ABA3FD1-CACC-4FBB-9339-C0418A08614F}.Development|Default.ActiveCfg = Development
-		{1ABA3FD1-CACC-4FBB-9339-C0418A08614F}.Development|Default.Build.0 = Development
+		{1ABA3FD1-CACC-4FBB-9339-C0418A08614F}.Debug|Any CPU.ActiveCfg = Development
+		{1ABA3FD1-CACC-4FBB-9339-C0418A08614F}.Debug|Any CPU.Build.0 = Development
+		{1ABA3FD1-CACC-4FBB-9339-C0418A08614F}.Development|Any CPU.ActiveCfg = Development
+		{1ABA3FD1-CACC-4FBB-9339-C0418A08614F}.Development|Any CPU.Build.0 = Development
+		{1ABA3FD1-CACC-4FBB-9339-C0418A08614F}.Release|Any CPU.ActiveCfg = Development
+		{1ABA3FD1-CACC-4FBB-9339-C0418A08614F}.Release|Any CPU.Build.0 = Development
+		{96262820-B753-4CDE-81B7-B55FFF6825CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96262820-B753-4CDE-81B7-B55FFF6825CA}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{96262820-B753-4CDE-81B7-B55FFF6825CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DELL-T7810</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMV1YGT2bP0yh2XXt+aKVSAAAAAACAAAAAAAQZgAAAAEAACAAAAD5IltQpr/fclrCSlR8/xojY1szAhTSA6s1oQLuZYR9bwAAAAAOgAAAAAIAACAAAAD1ra7GjZCXRJzYCycZVlrTjhcYAkLzBZSZKtZgNcn8g5AAAABrqpJ4El02HUFhEC0cnTIKMl3AYMtTDX4vXG9F5denZ92vCyOMqDlamgPrU+cYf4ndiTTHYi1+J1t7Pvn8FoQZ0U32HVjq+e2QW2G3NU9r/HRTXzIfrZj8ht2ed8CLAGBXzLFKEVFw4QShbFz0HUbVxSLFjYoNMx9jeTLkWwSIzeiZ2iTyHJ2Wkqth1wsmButAAAAAvS3wvCeIX64zwd5Fa5O0JZ96J/qXfReZ67txNM08sdIaqT59D3rNcIgkgB/Xg/cf36+SxnV6Bhaf/rWaeyUx3w==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMV1YGT2bP0yh2XXt+aKVSAAAAAACAAAAAAAQZgAAAAEAACAAAAButJoUYOX+kytQrQX0/iWE1jdiSVYlTLuB4xA1/M7/oAAAAAAOgAAAAAIAACAAAABxko43OWCzUgpRdqHB/TyTSMM8IH4k878Y3hwDL5av4pAAAAAO3Gd94ZlSYeLQQuwBYRm8DsYVWKmxb5Hjs3HX/fKUquTmKXTmg0jDDEDwbX6Hjm4Mv8HkwDNFspLaqjK+hYryGrOIDBThjzKDBwc32DGWsoV/aA36zUMgB9gieTFohqtb8bL06reauMXOWrEOXsmtxzL86Zwv3oeHcbd6PnOeW7N5JFRtnr4lqMNqChR/Ek1AAAAA5oHqkP1ed/VgqZaGBtwOSAaS/KOXHe814TFO+BqEruNVTuAnuPMNYl5784CZplbTPQQ0ATWAWr8I2CgB6ddweg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -413,6 +413,10 @@
     <ProjectItem>
       <Name>FillWeights.sql</Name>
       <FullPath>FillWeights.sql</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PrepareData.sql</Name>
+      <FullPath>PrepareData.sql</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>ProcessRates.sql</Name>

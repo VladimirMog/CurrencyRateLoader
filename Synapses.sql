@@ -1,3 +1,5 @@
+CREATE VIEW dbo.vWeights
+AS
 SELECT [Date]
       ,[INP001]
       ,[INP002]

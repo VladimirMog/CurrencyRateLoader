@@ -1,0 +1,19 @@
+
+DECLARE @date DATE = '1999-01-04'
+
+DECLARE CUR CURSOR
+FOR
+SELECT DISTINCT [Date]
+	FROM [Lotto].[dbo].[Rates]
+ORDER BY 1
+
+OPEN CUR
+WHILE (1=1)
+	BEGIN
+		FETCH FROM CUR INTO @date
+		IF @@FETCH_STATUS <> 0
+			BREAK
+		EXEC [dbo].[FillWeights]  @date =  @date
+	END
+CLOSE CUR
+DEALLOCATE CUR
